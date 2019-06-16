@@ -36,7 +36,10 @@ Route.group(() => {
     .apiOnly()
     .validator(new Map([[['projects.store', 'projects.update'], ['Project']]]))
     .middleware(new Map([[['projects.store', 'projects.update'], ['can:projects_create']]]))
+<<<<<<< HEAD
 
   Route.get('members', 'MemberController.index')
   Route.put('members/:id', 'MemberController.update').middleware('is:administrator')
+=======
+>>>>>>> bda250eb43f0813d70b9474321b31009b660b206
 }).middleware(['auth', 'team'])
